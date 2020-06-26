@@ -19,7 +19,7 @@ describe('Activities', () => {
     })
   });
 
-  it('Delete Activity should remove the deleted one', () => {
+  it('Delete Activity should remove the deleted one ', () => {
     Activities.deleteActivity().then(response => {
       expect(response.status).to.eq(200)      
     })

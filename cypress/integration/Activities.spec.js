@@ -1,28 +1,10 @@
-import Activities from '../support/requests/Activities.request'
+///<reference types="cypress"/>
 
-describe('Activities', () => {
-  it('Get Activities should return 200 status code', () => {
-    Activities.getAll().then(response => {
-      expect(response.status).to.eq(200);
+
+describe("Validação de um produto", () => {
+ 
+    
+    it( "Acessar o site e pesquisar por produto", function () {
+        cy.visit('www.youtube.com.br')
     })
-  });
-
-  it('Post Activity should return the created one', () => {
-    Activities.postActivity().then(response => {
-      expect(response.status).to.eq(200);
-    })
-  });
-
-  it('Put Activity should return the updated one', () => {
-    Activities.putActivity().then(response => {
-      expect(response.status).to.eq(200)
-    })
-  });
-
-  it('Delete Activity should remove the deleted one ', () => {
-    Activities.deleteActivity().then(response => {
-      expect(response.status).to.eq(200)      
-    })
-  });
-
-});
+})
